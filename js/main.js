@@ -7,7 +7,7 @@ const video = document.querySelector('video');
 const spans = document.querySelectorAll('.transcript span');
 
 
-video.addEventListener('timeupdate', () =>{
+video.addEventListener('timeupdate', function(){
 
 const cTime = video.getCurrentTime();
 
@@ -30,7 +30,7 @@ for(let i=0 ; i< spans.length ; i+=1){
 	const span = spans[i];
 	const start = parseFloat(span.dataset.start);
 	const end = parseFloat(span.dataset.end);
-span.addEventListener('click', () =>{
+span.addEventListener('click', function() {
 
 if(span){
  video.setCurrentTime(start);
